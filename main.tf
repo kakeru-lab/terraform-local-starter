@@ -9,16 +9,16 @@ resource "random_id" "run" {
 resource "local_file" "hello" {
   filename = "${local.out_dir}/hello.txt"
   content  = <<-EOT
-  ${var.message}
-  owner: ${var.owner}
-  run_id: ${random_id.run.hex}
-  created_at: ${timestamp()}
-  EOT
+${var.message}
+owner: ${var.owner}
+run_id: ${random_id.run.hex}
+created_at: ${timestamp()}
+EOT
 }
 
 resource "local_file" "metadata" {
   filename = "${local.out_dir}/metadata.json"
-  content  = jsonencode({
+  content = jsonencode({
     owner      = var.owner
     run_id     = random_id.run.hex
     created_at = timestamp()
