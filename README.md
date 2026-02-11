@@ -1,3 +1,4 @@
+[![terraform-ci](https://github.com/kakeru-lab/terraform-local-starter/actions/workflows/ci.yml/badge.svg)](https://github.com/kakeru-lab/terraform-local-starter/actions/workflows/ci.yml)
 # terraform-local-starter 
 
 Terraform を **クラウドアカウント不要**で学べる / 試せる / CIまで入ったスターターです。  
